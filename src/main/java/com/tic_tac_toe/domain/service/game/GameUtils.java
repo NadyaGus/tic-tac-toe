@@ -3,6 +3,12 @@ package com.tic_tac_toe.domain.service.game;
 public class GameUtils {
     private static final int EMPTY = 0;
 
+    /**
+     *
+     * @param field - поле игры
+     * @return -1, если игра не закончена или ничья. В противном случае возвращает номер игрока
+     * в случае победы одного из них (1 или 2)
+     */
     public int checkWinner(int[][] field) {
         for (int i = 0; i < 3; i++) {
             if (field[i][0] != EMPTY && field[i][0] == field[i][1] && field[i][1] == field[i][2]) return field[i][0];
